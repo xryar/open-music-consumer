@@ -18,7 +18,7 @@ class MailSender {
       to: targetEmail,
       subject: 'Eksport Playlist',
       text: 'Terlampir hasil dari Ekspor Playlist',
-      attachment: [
+      attachments: [
         {
           filename: 'playlist.json',
           content,

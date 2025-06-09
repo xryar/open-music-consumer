@@ -1,6 +1,6 @@
 const { Pool } = require('pg');
 
-class PlaylistService {
+class PlaylistsService {
   constructor() {
     this._pool = new Pool();
   }
@@ -35,4 +35,4 @@ class PlaylistService {
   }
 }
 
-module.exports = PlaylistService;
+module.exports = PlaylistsService;
