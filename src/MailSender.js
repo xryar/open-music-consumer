@@ -11,6 +11,23 @@ class MailSender {
       }
     });
   }
+
+  sendEmail(targetEmail, content) {
+    const message = {
+      from: 'Open Music',
+      to: targetEmail,
+      subject: 'Eksport Playlist',
+      text: 'Terlampir hasil dari Ekspor Playlist',
+      attachment: [
+        {
+          filename: 'playlist.json',
+          content,
+        },
+      ],
+    };
+
+    return this._transporter.sendMail(message);
+  }
 }
 
 module.exports = MailSender;
